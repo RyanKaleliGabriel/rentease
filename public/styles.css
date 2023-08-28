@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.sideBar
+{
+    background-color: white;
+}
+.navBar{
+    background-color: white;
+    padding: 5px 0 5px 10px;
+}
+.content{
+    background-color: #dee2e6;
+}
+.ns-row{
+    margin: 0;
+    width: 100%;
+}
+.container-fluid{
+    padding: 0;
+}

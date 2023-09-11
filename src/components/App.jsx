@@ -1,11 +1,11 @@
 import React from "react";
-import Navside from "./Dashboard/NavSideBars/Navside";
+import Main from "./Dashboard/Main";
 
 
 export default function App () {
   return (
     <div>
-      <Navside/>
+      <Main/>
     </div>
   );
 }

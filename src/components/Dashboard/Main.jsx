@@ -1,5 +1,5 @@
 import React from "react";
-import SideBar from "./Sidebar";
+import SideBar from "./SideBar/Sidebar";
 import Content from "./Content";
 
 export default function Main() {
@@ -7,6 +7,7 @@ export default function Main() {
     <div className="wrapper">
       <SideBar />
       <Content />
+
     </div>
   );
 }

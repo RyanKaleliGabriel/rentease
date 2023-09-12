@@ -7,7 +7,7 @@ body {
   display: flex;
 }
 .sideBar {
-  width: 75px;
+  width: 70px;
   background-color: #fff;
   color: #000;
   transition: width 0.4s ease;
@@ -18,30 +18,62 @@ body {
   width: 20%;
   transition: width 0.4s ease;
   height: 100vh;
-  background-color: #fff;
+  background-color:  #fff;
   color: #000;
 }
-.sideBarContent{
-  display: flex;
-  align-items: center;
-  background-color: #dbdee0;
-}
-.sideBarLogo{
-}
-.iconSideBar{
-  color: #7C0FBD;
-  font-size: 25px;
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+  .sideBar{
+    display: none;
+  }
+  .sidebarMinimized{
+    display: none;
+  }
 }
 
-.navBar {
-  height: 50px;
-  background-color: #dee2e6;
-  color: #fff;
+@media screen and (max-width: 767px) {
+  .sideBar{
+    display: none;
+  }
+  .sidebarMinimized{
+    display: none;
+  }
+}
+.sideBarLogo{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #6527BE;
+  
 }
+.sideBarItems{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  background-color: #fff;
+  margin-top: 8px;
+}
+
+.sideBarContainer{
+  background-color: #fff;
+}
+.iconSideBar{
+  color: #6527BE;
+  font-size: 23px;
+}
+.iconSideBarItem{
+  color: #9681EB;
+  font-size: 23px;
+}
+.sideComponents{
+  text-decoration: none;
+  color: #9681EB;
+  font-size: 17px;
+}
+.sideComponents:hover{
+  transform: scale(1.1);
+}
+
 
 .content {
   flex: 1;
@@ -56,11 +88,17 @@ body {
   background-color: none;
 }
 .toggleSidebar:hover {
+  background-color: #fff;
+  border-radius: 27px;
+  transition: 0.4s ease, background-color 0.3s ease;
+}
+
+.toggleSidebarItems{
   background-color: #dee2e6;
-  border-radius: 18px;
+  border-radius: 100%;
 }
 .mainContent {
-  background-color: #f1f2f3;
+  background-color: #f8f8f8;
   height: 100vh;
 }
 
@@ -69,54 +107,25 @@ body {
   font-size: 17px;
   font-weight: bold;
 }
-.navDropdown {
-  margin-right: 20px;
-}
-
-.spacer {
-  flex: 1;
-}
 .profile {
   height: 30px;
   width: 30px;
   border-radius: 100%;
-  margin-right: 3rem;
   margin-bottom: 5px;
 }
 
-.menu-button {
-  background: none;
-  border: none;
-}
-.notification-box {
-  padding: 2rem;
-}
-.notification-message {
+.navWrapper{
   display: flex;
-  margin-top: 1rem;
-  
-}
-.notification-icon {
-  font-size: 20px;
-  color: cadetblue;
-  margin-bottom: 2.5rem;
-  margin-right: 1.5rem;
-}
-.content-notification {
-  color: gray;
-  font-size: 13px;
-}
-.notification-number {
-  margin-top: 1rem;
-}
-.to-notifications {
-  text-decoration: underline;
-  text-align: center;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-evenly;
   align-items: center;
-  color: gray;
-  font-size: 12px;
-  margin-bottom: 1rem;
 }
-.profile-container {
-  display: flex;
+@media screen and (min-width: 1025px) {
+  .navWrapper{
+    display: none;
+  }
 }
+
+
+

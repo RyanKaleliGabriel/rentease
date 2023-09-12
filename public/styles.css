@@ -3,25 +3,30 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Main Component */
+
 .wrapper {
   display: flex;
 }
+/* End of Main Component */
+
+/* SideBar */
 .sideBar {
   width: 70px;
   background-color: #fff;
   color: #000;
   transition: width 0.4s ease;
   overflow: hidden;
-  height: 100vh;
+  height: auto;
 }
 .sidebarMinimized {
   width: 20%;
   transition: width 0.4s ease;
-  height: 100vh;
+  height: auto;
   background-color:  #fff;
   color: #000;
 }
-
 @media screen and (min-width: 768px) and (max-width:1024px) {
   .sideBar{
     display: none;
@@ -30,7 +35,6 @@ body {
     display: none;
   }
 }
-
 @media screen and (max-width: 767px) {
   .sideBar{
     display: none;
@@ -44,7 +48,6 @@ body {
   align-items: center;
   background-color: #fff;
   color: #6527BE;
-  
 }
 .sideBarItems{
   display: flex;
@@ -53,7 +56,6 @@ body {
   background-color: #fff;
   margin-top: 8px;
 }
-
 .sideBarContainer{
   background-color: #fff;
 }
@@ -73,11 +75,6 @@ body {
 .sideComponents:hover{
   transform: scale(1.1);
 }
-
-
-.content {
-  flex: 1;
-}
 .toggleSidebar {
   cursor: pointer;
   border: none;
@@ -92,40 +89,108 @@ body {
   border-radius: 27px;
   transition: 0.4s ease, background-color 0.3s ease;
 }
-
 .toggleSidebarItems{
   background-color: #dee2e6;
   border-radius: 100%;
 }
-.mainContent {
-  background-color: #f8f8f8;
-  height: 100vh;
-}
 
-.name-logo {
-  color: black;
-  font-size: 17px;
-  font-weight: bold;
-}
 .profile {
   height: 30px;
   width: 30px;
   border-radius: 100%;
   margin-bottom: 5px;
 }
+/* End of SideBar */
 
+/* NavBar Component */
 .navWrapper{
   display: flex;
   flex-direction: row;
   flex: 1;
   justify-content: space-evenly;
   align-items: center;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
 }
 @media screen and (min-width: 1025px) {
   .navWrapper{
     display: none;
+    position: fixed;
   }
 }
+/* End of NavBar Component */
+
+/* Content Component */
+.content {
+  flex: 1;
+}
+
+.mainContent {
+  background-color: #f8f8f8;
+  height: 100vh;
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .mainContent{
+    height: auto;
+    margin-bottom: 85px;
+    background-color: #f8f8f8;
+  }
+  .contentContainer{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mainContent{
+    height: auto;
+    margin-bottom: 85px;
+    background-color: #f8f8f8;
+  }
+  .contentContainer{
+    width: 100%;
+  }
+}
+
+.numericStatsParent{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: left;
+  flex-wrap: wrap;
+
+}
+.numericStatsChild{
+  background-color: #fff;
+  display: flex;
+  
+}
+.contentContainer{
+  padding: 35px;
+  background-color: #fff;
+  margin-top: 45px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.stat{
+  margin-left: 5px;
+}
+.statName{
+  margin-right: 45px;
+  margin-bottom: 30px;
+}
+
+/* End of Content Component */
+
+
+
+
 
 
 

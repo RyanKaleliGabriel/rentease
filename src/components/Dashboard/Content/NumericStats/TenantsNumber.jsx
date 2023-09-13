@@ -5,10 +5,9 @@ export default function TenantsNumber() {
     <div className="contentContainer">
       <div className="numericStatsChild">
         <span className="statName">Tenants</span>
-        <i className="bi bi-people iconSideBar"></i>
-        <br />
+        <i className="bi bi-people statIconTenant"></i>
       </div>
-      <h5 className="stat">567</h5>
+      <h5 className="stat">110</h5>
     </div>
   );
 }

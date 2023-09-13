@@ -1,6 +1,8 @@
 import React from "react";
 import NavBar from "../Navbar/Navbar";
 import NumericStats from "./NumericStats/NumericStats";
+import OccupiedUnits from "./OccupiedUnits/OccupiedUnits"
+
 
 export default function Content() {
   return (
@@ -8,6 +10,7 @@ export default function Content() {
       <NavBar />
       <div className="mainContent">
         <NumericStats />
+        <OccupiedUnits/>
       </div>
     </main>
   );

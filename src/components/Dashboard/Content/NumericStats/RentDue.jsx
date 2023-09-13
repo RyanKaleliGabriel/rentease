@@ -4,10 +4,10 @@ export default function RentDue() {
   return (
     <div className="contentContainer">
       <div className="numericStatsChild">
-        <span className="statName">Tenants</span>
-        <i className="bi bi-people iconSideBar"></i>
+        <p className="statName">Total Revenue</p>
+        <i className="bi bi-wallet2 statIconRent"></i>
       </div>
-      <h5 className="stat">567</h5>
+      <h5 className="stat">KES:56000</h5>
     </div>
   );
 }

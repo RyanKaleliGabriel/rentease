@@ -5,7 +5,6 @@ body {
 }
 
 /* Main Component */
-
 .wrapper {
   display: flex;
 }
@@ -24,55 +23,57 @@ body {
   width: 20%;
   transition: width 0.4s ease;
   height: auto;
-  background-color:  #fff;
+  background-color: #fff;
   color: #000;
 }
-@media screen and (min-width: 768px) and (max-width:1024px) {
-  .sideBar{
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sideBar {
     display: none;
   }
-  .sidebarMinimized{
+  .sidebarMinimized {
     display: none;
   }
 }
 @media screen and (max-width: 767px) {
-  .sideBar{
+  .sideBar {
     display: none;
   }
-  .sidebarMinimized{
+  .sidebarMinimized {
     display: none;
   }
 }
-.sideBarLogo{
+.sideBarLogo {
   display: flex;
   align-items: center;
   background-color: #fff;
-  color: #6527BE;
+  color: #6527be;
+  font-family: "Poppins", sans-serif;
 }
-.sideBarItems{
+.sideBarItems {
   display: flex;
   align-items: center;
   font-size: 1rem;
   background-color: #fff;
   margin-top: 8px;
 }
-.sideBarContainer{
+.sideBarContainer {
   background-color: #fff;
 }
-.iconSideBar{
-  color: #6527BE;
+.iconSideBar {
+  color: #6527be;
   font-size: 23px;
 }
-.iconSideBarItem{
-  color: #9681EB;
+.iconSideBarItem {
+  color: #9681eb;
   font-size: 23px;
 }
-.sideComponents{
+.sideComponents {
   text-decoration: none;
-  color: #9681EB;
-  font-size: 17px;
+  color: #9681eb;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
 }
-.sideComponents:hover{
+.sideComponents:hover {
   transform: scale(1.1);
 }
 .toggleSidebar {
@@ -89,7 +90,7 @@ body {
   border-radius: 27px;
   transition: 0.4s ease, background-color 0.3s ease;
 }
-.toggleSidebarItems{
+.toggleSidebarItems {
   background-color: #dee2e6;
   border-radius: 100%;
 }
@@ -103,7 +104,7 @@ body {
 /* End of SideBar */
 
 /* NavBar Component */
-.navWrapper{
+.navWrapper {
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -117,7 +118,7 @@ body {
   background-color: #fff;
 }
 @media screen and (min-width: 1025px) {
-  .navWrapper{
+  .navWrapper {
     display: none;
     position: fixed;
   }
@@ -131,45 +132,50 @@ body {
 
 .mainContent {
   background-color: #f8f8f8;
-  height: 100vh;
-
+  height: auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .mainContent{
+  .mainContent {
     height: auto;
     margin-bottom: 85px;
     background-color: #f8f8f8;
   }
-  .contentContainer{
+  .contentContainer {
     width: 100%;
+  }
+  .recentlyTableChild {
+    flex-basis: 300px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .mainContent{
+  .mainContent {
     height: auto;
     margin-bottom: 85px;
     background-color: #f8f8f8;
   }
-  .contentContainer{
+  .contentContainer {
     width: 100%;
+  }
+  .recentlyTableChild {
+    flex-basis: 300px;
   }
 }
 
-.numericStatsParent{
+.numericStatsParent {
   display: flex;
   flex-direction: row;
   flex: 1;
   justify-content: left;
   flex-wrap: wrap;
-
+  flex-basis: 100px;
 }
-.numericStatsChild{
+.numericStatsChild {
   background-color: #fff;
   display: flex;
-  
+  justify-content: space-between;
 }
-.contentContainer{
+.contentContainer {
   padding: 35px;
   background-color: #fff;
   margin-top: 45px;
@@ -178,19 +184,78 @@ body {
   margin-bottom: 20px;
   border-radius: 15px;
 }
-.stat{
+.stat {
   margin-left: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
 }
-.statName{
+.statIconRent,
+.statIconUnitsO,
+.statIconUnitsV,
+.statIconTenant {
+  font-size: 18px;
+  border-radius: 100%;
+  padding: 9px;
+  height: 40px;
+  width: 40px;
+  color: white;
+}
+
+.statIconRent {
+  background-color: #45cfdd;
+}
+.statIconUnitsO {
+  background-color: #6527be;
+}
+.statIconTenant {
+  background-color: #9681eb;
+}
+.statIconUnitsV {
+  background-color: #a7ede7;
+}
+.statName {
   margin-right: 45px;
   margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  color: #6527be;
 }
-
+.recentlyTable {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.recentlyTableChild {
+  padding: 20px;
+  background-color: #fff;
+  flex-basis: 500px;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#recentlyRegistered th {
+  font-family: "Poppins", sans-serif;
+  color: #6527be;
+  padding: 10px;
+}
+#recentlyRegistered td {
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.dateTable {
+  background-color: #45cfdd;
+  padding: 5px;
+  color: #fff;
+  border-radius: 19px;
+  font-size: 14px;
+}
+.tableHeading {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin-left: 9px;
+}
 /* End of Content Component */
-
-
-
-
-
-
-

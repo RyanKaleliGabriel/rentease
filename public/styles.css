@@ -64,13 +64,13 @@ body {
   font-size: 23px;
 }
 .iconSideBarItem {
-  color: #9681eb;
+  color: #6527be;
   font-size: 23px;
 }
 .sideComponents {
   text-decoration: none;
-  color: #9681eb;
   font-size: 15px;
+  color: #686868;
   font-family: "Poppins", sans-serif;
 }
 .sideComponents:hover {
@@ -128,6 +128,7 @@ body {
 /* Content Component */
 .content {
   flex: 1;
+  background-color: #f8f8f8;
 }
 
 .mainContent {
@@ -143,8 +144,8 @@ body {
   .contentContainer {
     width: 100%;
   }
-  .recentlyTableChild {
-    flex-basis: 300px;
+  .dateTransc, .reasonTransc, .nameTransc{
+    display: none;
   }
 }
 
@@ -153,13 +154,15 @@ body {
     height: auto;
     margin-bottom: 85px;
     background-color: #f8f8f8;
+    padding-top: 20px;
   }
   .contentContainer {
     width: 100%;
   }
-  .recentlyTableChild {
-    flex-basis: 300px;
+  .dateTransc, .reasonTransc, .nameTransc{
+    display: none;
   }
+
 }
 
 .numericStatsParent {
@@ -188,6 +191,7 @@ body {
   margin-left: 5px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  color: #686868;
 }
 .statIconRent,
 .statIconUnitsO,
@@ -224,27 +228,27 @@ body {
   flex-direction: row;
   flex: 1;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
 }
 .recentlyTableChild {
-  padding: 20px;
   background-color: #fff;
-  flex-basis: 500px;
   border-radius: 5px;
   margin-left: 30px;
+  padding: 17px;
   margin-bottom: 20px;
-  margin-right: 20px;
 }
+
 #recentlyRegistered th {
   font-family: "Poppins", sans-serif;
   color: #6527be;
   padding: 10px;
+
 }
 #recentlyRegistered td {
   padding: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  color: #686868;
 }
 .dateTable {
   background-color: #45cfdd;
@@ -256,6 +260,49 @@ body {
 .tableHeading {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
-  margin-left: 9px;
+  margin-left: 12px;
+  color: #686868;
+}
+
+#recentlyRegistered tr:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+.adminHeading {
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  margin-top: 20px;
+  color: #686868;
+  margin-left: 10px;
+}
+.admin {
+  width: 50%;
+  display: flex;
+  flex: 1;
+  margin-left: 30px;
+}
+.statusTransc{
+  background-color: #858585;
+  padding: 5px;
+  color: #fff;
+  border-radius: 19px;
+  font-size: 14px;
+}
+.tableBtn{
+  float: right;
+  color: #fff;
+  background-color: #9681eb;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.tableBtn:hover {
+  background-color: #6527be;
+  transition: 0.3s ease-in-out;
+}
+.tableContainer{
+  display: flex;
+  justify-content: space-between;
 }
 /* End of Content Component */

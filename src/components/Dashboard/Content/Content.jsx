@@ -2,6 +2,10 @@ import React from "react";
 import NavBar from "../Navbar/Navbar";
 import NumericStats from "./NumericStats/NumericStats";
 import FirstTables from "./FirstTables/FirstTables";
+import Complaints from "./Complaints/Complaints";
+import { useState } from "react";
+
+
 
 export default function Content() {
   return (
@@ -13,6 +17,7 @@ export default function Content() {
         </div>
         <NumericStats />
         <FirstTables />
+        <Complaints/>
       </div>
     </main>
   );

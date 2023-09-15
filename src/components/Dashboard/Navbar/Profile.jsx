@@ -9,7 +9,6 @@ export default function Profile(props) {
           <img src={pic} alt="#" className="profile"></img>
         </a>
       </button>
-
     </div>
   );
 }

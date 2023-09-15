@@ -1,13 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import Profile from "./Profile";
-import Notifications from "./Notifications"
-import Units from "./Units";
-import Transactions from "./Transactions";
-import Staff from "./Staff";
-import Tenants from "./Tenants";
+import Main from "./Main";
 
-export default function SideBar() {
+export default function SideBar(props) {
+  const sidelinks = [
+    { icon: "iconSideBarItem bi bi-people", name: "Tenants" },
+    { icon: "iconSideBarItem bi bi-houses", name: "Units" },
+    { icon: "iconSideBarItem bi bi-cash", name: "Transactions" },
+    { icon: "iconSideBarItem bi bi-bell", name: "Notifications" },
+    { icon: "iconSideBarItem bi bi-person-gear", name: "Staff" },
+  ];
   // Toggle function of the menu
   const [sidebarVisible, setSideBarVisible] = useState(false);
   const toggleSideBar = () => {
@@ -15,13 +18,19 @@ export default function SideBar() {
   };
   // End of toggle function
 
+  //Creating a sideBar Entry
+  const createEntry = (entrydetail) => {
+    return <Main mainIcon={entrydetail.icon} mainName={entrydetail.name} />;
+  };
+  //End of Sidebar Entry
+
   return (
     // Icon And Company Name
-    <div className={sidebarVisible ? "sideBar" : "sidebarMinimized"}>
+    <div className={sidebarVisible ? "sidebarMinimized" : "sideBar"}>
       <div className="sideBarLogo">
         <button onClick={toggleSideBar} className="toggleSidebar">
           <i
-            class={`iconSideBar ${sidebarVisible ? "bi bi-list" : "bi bi-x"}`}
+            class={`iconSideBar ${sidebarVisible ? "bi bi-x" : "bi bi-list"}`}
           ></i>
         </button>
         <h5 className="sideBarLogo">RentEase</h5>
@@ -29,12 +38,8 @@ export default function SideBar() {
       {/* // End of Icon and Company Name */}
 
       <div className="sideBarContainer">
-        <Tenants toggle={toggleSideBar}/>
-        <Units toggle={toggleSideBar}/>
-        <Transactions toggle={toggleSideBar}/>
-        <Notifications toggle={toggleSideBar}/>
-        <Staff toggle={toggleSideBar}/>
-        <Profile toggle={toggleSideBar}/>
+        {sidelinks.map(createEntry)}
+        <Profile />
       </div>
       {/* End of SideBar Container */}
     </div>

@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Main Component */
@@ -17,14 +16,20 @@ body {
   color: #000;
   transition: width 0.4s ease;
   overflow: hidden;
-  height: auto;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .sidebarMinimized {
   width: 20%;
   transition: width 0.4s ease;
-  height: auto;
+  height: 100vh;
   background-color: #fff;
   color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .sideBar {
@@ -86,8 +91,8 @@ body {
   background-color: none;
 }
 .toggleSidebar:hover {
-  background-color: #fff;
-  border-radius: 27px;
+  background-color: #f8f8f8;
+  border-radius: 100%;
   transition: 0.4s ease, background-color 0.3s ease;
 }
 .toggleSidebarItems {
@@ -129,12 +134,16 @@ body {
 .content {
   flex: 1;
   background-color: #f8f8f8;
+  margin-left: 80px;
 }
 
 .mainContent {
   background-color: #f8f8f8;
   height: auto;
 }
+
+
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .mainContent {
     height: auto;
@@ -144,8 +153,16 @@ body {
   .contentContainer {
     width: 100%;
   }
-  .dateTransc, .reasonTransc, .nameTransc{
+  .contentContainerAnim{
+    width: 100%;
+  }
+  .dateTransc,
+  .reasonTransc,
+  .nameTransc {
     display: none;
+  }
+  .content{
+    margin-left: 0;
   }
 }
 
@@ -159,10 +176,17 @@ body {
   .contentContainer {
     width: 100%;
   }
-  .dateTransc, .reasonTransc, .nameTransc{
+  .contentContainerAnim{
+    width: 100%;
+  }
+  .dateTransc,
+  .reasonTransc,
+  .nameTransc {
     display: none;
   }
-
+  .content{
+    margin-left: 0;
+  }
 }
 
 .numericStatsParent {
@@ -242,7 +266,6 @@ body {
   font-family: "Poppins", sans-serif;
   color: #6527be;
   padding: 10px;
-
 }
 #recentlyRegistered td {
   padding: 10px;
@@ -280,14 +303,14 @@ body {
   flex: 1;
   margin-left: 30px;
 }
-.statusTransc{
+.statusTransc {
   background-color: #858585;
   padding: 5px;
   color: #fff;
   border-radius: 19px;
   font-size: 14px;
 }
-.tableBtn{
+.tableBtn {
   float: right;
   color: #fff;
   background-color: #9681eb;
@@ -301,8 +324,73 @@ body {
   background-color: #6527be;
   transition: 0.3s ease-in-out;
 }
-.tableContainer{
+.tableContainer {
   display: flex;
   justify-content: space-between;
 }
 /* End of Content Component */
+
+/* Complaints Sections */
+.complaintSParent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 20px 20px;
+  border-radius: 19px;
+  background-color: #fff;
+  padding: 40px;
+}
+.complaintsChild {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+.complaint {
+  float: right;
+  margin-left: 38px;
+  font-size: 14px;
+  color: #686868;
+  padding-top: 20px;
+  text-align: justify;
+}
+.profileComplaint {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+.complaintHeading{
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin-left: 12px;
+  color: #6527be;
+}
+.complaintTimeContainer{
+  display: flex;
+  margin-bottom: 20px;
+}
+.complaintTime{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin-left: 70px;
+  color: #ccc;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+.complaintBtn{
+  color: #fff;
+  background-color: #9681eb;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.complaintBtn:hover {
+  background-color: #6527be;
+  transition: 0.3s ease-in-out;
+}
+.complaintContent:not(:last-child){
+  border-bottom: 1px solid #ccc;
+}
+/* End of complaints section */

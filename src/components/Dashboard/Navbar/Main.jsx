@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Units(props) {
+export default function Main(props) {
   return (
     <div className="sideBarItems">
       <button className="toggleSidebar">
-        <i class="iconSideBarItem bi bi-houses"></i>
+        <i class={props.mainIcon}></i>
       </button>
     </div>
   );

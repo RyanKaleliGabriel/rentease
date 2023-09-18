@@ -70,7 +70,7 @@ body {
 }
 .iconSideBarItem {
   color: #6527be;
-  font-size: 23px;
+  font-size: 18px;
 }
 .sideComponents {
   text-decoration: none;
@@ -176,6 +176,7 @@ body {
   .contentContainer {
     width: 100%;
   }
+
   .contentContainerAnim{
     width: 100%;
   }
@@ -210,6 +211,9 @@ body {
   margin-left: 30px;
   margin-bottom: 20px;
   border-radius: 15px;
+}
+.contentContainer:hover{
+  border: 1px solid #6527be;
 }
 .stat {
   margin-left: 5px;

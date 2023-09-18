@@ -3,13 +3,15 @@ import { useState } from "react";
 import Profile from "./Profile";
 import Main from "./Main";
 
+
+
 export default function SideBar(props) {
   const sidelinks = [
-    { icon: "iconSideBarItem bi bi-people", name: "Tenants" },
-    { icon: "iconSideBarItem bi bi-houses", name: "Units" },
-    { icon: "iconSideBarItem bi bi-cash", name: "Transactions" },
-    { icon: "iconSideBarItem bi bi-bell", name: "Notifications" },
-    { icon: "iconSideBarItem bi bi-person-gear", name: "Staff" },
+    { icon: "iconSideBarItem bi bi-people", name: "Tenants", link: "/tenants" },
+    { icon: "iconSideBarItem bi bi-houses", name: "Units", link: "" },
+    { icon: "iconSideBarItem bi bi-cash", name: "Transactions", link: "" },
+    { icon: "iconSideBarItem bi bi-bell", name: "Notifications", link: "" },
+    { icon: "iconSideBarItem bi bi-person-gear", name: "Staff", link: "" },
   ];
   // Toggle function of the menu
   const [sidebarVisible, setSideBarVisible] = useState(false);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export default function Main(props) {
   return (
@@ -6,9 +7,9 @@ export default function Main(props) {
       <button className="toggleSidebar">
         <i class={props.mainIcon}></i>
       </button>
-      <a href="/#" className="sideComponents">
+      <Link to={props.mainLink} className="sideComponents">
         {props.mainName}
-      </a>
+      </Link>
     </div>
   );
 }

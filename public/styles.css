@@ -70,7 +70,7 @@ body {
 }
 .iconSideBarItem {
   color: #6527be;
-  font-size: 18px;
+  font-size: 23px;
 }
 .sideComponents {
   text-decoration: none;
@@ -142,8 +142,6 @@ body {
   height: auto;
 }
 
-
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .mainContent {
     height: auto;
@@ -153,7 +151,7 @@ body {
   .contentContainer {
     width: 100%;
   }
-  .contentContainerAnim{
+  .contentContainerAnim {
     width: 100%;
   }
   .dateTransc,
@@ -161,7 +159,7 @@ body {
   .nameTransc {
     display: none;
   }
-  .content{
+  .content {
     margin-left: 0;
   }
 }
@@ -177,7 +175,7 @@ body {
     width: 100%;
   }
 
-  .contentContainerAnim{
+  .contentContainerAnim {
     width: 100%;
   }
   .dateTransc,
@@ -185,7 +183,7 @@ body {
   .nameTransc {
     display: none;
   }
-  .content{
+  .content {
     margin-left: 0;
   }
 }
@@ -212,7 +210,7 @@ body {
   margin-bottom: 20px;
   border-radius: 15px;
 }
-.contentContainer:hover{
+.contentContainer:hover {
   border: 1px solid #6527be;
 }
 .stat {
@@ -363,25 +361,25 @@ body {
   margin-bottom: 5px;
   margin-top: 20px;
 }
-.complaintHeading{
+.complaintHeading {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   margin-left: 12px;
   color: #6527be;
 }
-.complaintTimeContainer{
+.complaintTimeContainer {
   display: flex;
   margin-bottom: 20px;
 }
-.complaintTime{
-  font-family: 'Roboto', sans-serif;
+.complaintTime {
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   margin-left: 70px;
   color: #ccc;
   margin-right: 10px;
   margin-top: 8px;
 }
-.complaintBtn{
+.complaintBtn {
   color: #fff;
   background-color: #9681eb;
   border: none;
@@ -394,7 +392,18 @@ body {
   background-color: #6527be;
   transition: 0.3s ease-in-out;
 }
-.complaintContent:not(:last-child){
+.complaintContent:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 /* End of complaints section */
+
+/* Error Page */
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* End of ErrorPage */

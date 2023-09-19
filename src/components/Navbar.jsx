@@ -1,8 +1,16 @@
 import React from "react";
-import Profile from "./Profile";
-import Main from "./Main";
+import Profile from "./Navbar/Profile";
 
 export default function NavBar() {
+  const Main = (props) => {
+    return (
+      <div className="sideBarItems">
+        <button className="toggleSidebar">
+          <i class={props.mainIcon}></i>
+        </button>
+      </div>
+    );
+  };
   const navlinks = [
     { icon: "iconSideBarItem bi bi-people" },
     { icon: "iconSideBarItem bi bi-houses" },

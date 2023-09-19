@@ -1,12 +1,14 @@
 import React from "react";
-import Main from "./Dashboard/Main";
+
+import SideBar from "./Sidebar";
 
 
-
-export default function App () {
+export default function App() {
   return (
     <div>
-      <Main/>
+      <div className="wrapper">
+        <SideBar />
+      </div>
     </div>
   );
 }

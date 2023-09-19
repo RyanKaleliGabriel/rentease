@@ -1,7 +1,23 @@
 import React from "react";
-import Main from "./Main";
+
 
 export default function NumericStats() {
+
+  const Main = (props) =>{
+    return(
+      <div
+      className="contentContainer"
+    >
+      <div className="numericStatsChild">
+        <span className="statName">{props.mainName}</span>
+        <i className={props.mainIcon}></i>
+      </div>
+      <h5 className="stat">{props.mainNumber}</h5>
+    </div>
+    );
+  }
+
+
   const numericcontainers = [
     {
       name: "Tenants",

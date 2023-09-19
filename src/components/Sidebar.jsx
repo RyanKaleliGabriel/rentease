@@ -1,11 +1,23 @@
 import React from "react";
 import { useState } from "react";
-import Profile from "./Profile";
-import Main from "./Main";
-
+import Profile from "./SideBar/Profile";
 
 
 export default function SideBar(props) {
+
+  const Main = (props) => {
+    return (
+      <div className="sideBarItems">
+        <button className="toggleSidebar">
+          <i class={props.mainIcon}></i>
+        </button>
+        <a href={props.mainLink} className="sideComponents">
+          {props.mainName}
+        </a>
+      </div>
+    );
+  };
+
   const sidelinks = [
     { icon: "iconSideBarItem bi bi-people", name: "Tenants", link: "/tenants" },
     { icon: "iconSideBarItem bi bi-houses", name: "Units", link: "" },

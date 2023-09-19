@@ -1,11 +1,26 @@
 import React from "react";
-import pic1 from "../../../../assets/pexels-rdne-stock-project-7148363.jpg";
-import pic2 from "../../../../assets/pexels-pixabay-220453.jpg";
-import pic3 from "../../../../assets/pexels-dziana-hasanbekava-7275385.jpg";
-import pic4 from "../../../../assets/pexels-cottonbro-studio-6943429.jpg";
-import Main from "./Main";
+import pic1 from "../../../assets/pexels-rdne-stock-project-7148363.jpg";
+import pic2 from "../../../assets/pexels-pixabay-220453.jpg";
+import pic3 from "../../../assets/pexels-dziana-hasanbekava-7275385.jpg";
+import pic4 from "../../../assets/pexels-cottonbro-studio-6943429.jpg";
+
 
 export default function Complaints() {
+  const Main = (props) => {
+    return (
+      <div className="complaintContent">
+        <div className="complaintsChild">
+          <img alt="#" src={props.image} className="profileComplaint" />
+          <p className="complaint">{props.complaint}</p>
+        </div>
+        <div className="complaintTimeContainer">
+          <p className="complaintTime">{props.time}</p>
+          <button className="complaintBtn">{props.email}</button>
+        </div>
+      </div>
+    );
+  };
+
   const data = [
     {
       image: pic4,

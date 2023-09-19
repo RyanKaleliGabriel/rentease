@@ -1,5 +1,5 @@
 import React from "react";
-import pic from "../../../assets/smiling-woman-new-home.jpg";
+import pic from "../../assets/smiling-woman-new-home.jpg";
 
 export default function Profile(props) {
   return (
@@ -9,6 +9,9 @@ export default function Profile(props) {
           <img src={pic} alt="#" className="profile"></img>
         </a>
       </button>
+      <a href="/#" className="sideComponents">
+        Profile
+      </a>
     </div>
   );
 }
